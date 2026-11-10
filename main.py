@@ -53,7 +53,7 @@ def main() -> int:
 
         try:
             result = calc.calculate(expression)
-            print(result)
+            print(0.0 if result == -0.0 else result)
         except CalculatorError as e:
             logger.warning("Ошибка в выражении %r: %s", expression, e)
             print(f"Ошибка: {e}")

@@ -220,6 +220,8 @@ class Calculator:
 
     def _power(self, base: float, exp: float) -> float:
         """Вычисляет степень с обработкой особых случаев."""
+        if math.isinf(base) and exp == 0.0:
+            return math.nan
         if base == 0.0 and exp < 0:
             sign = 1.0
 
